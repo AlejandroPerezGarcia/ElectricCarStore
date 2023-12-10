@@ -1,65 +1,68 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/*Small devices (landscape phones, 576px and up)*/
 
-/*Small devices (landscape phones, 576px and up)*/ 
-
-body{
-    display: grid;
-    grid-template-rows: 50px 50px calc(100vh - 200px ) 50px 50px ;
-    grid-template-areas: 
+body {
+  display: grid;
+  grid-template-rows: 50px 50px calc(100vh - 150px) 50px;
+  grid-template-areas:
     "nav"
     "buscar"
     "section"
-    "paginacion"
     "footer";
 }
 
-
-nav{
-    grid-area: nav;
-    padding: 10px;
-    background-color: blue;
-    color: #fff;
+nav {
+  grid-area: nav;
+  padding: 10px;
+  background-color: blue;
+  color: #fff;
 }
 
-.buscar{
-    grid-area: buscar;
-    padding: 10px;
-    background-color: aqua;
-    color: #000;
+.buscar {
+  grid-area: buscar;
+  padding: 10px;
+  background-color: aqua;
+  color: #000;
 }
 
-section{
-    grid-area: section;
-    padding: 10px;
-    background-color: yellow;    
+section {
+  grid-area: section;
+  padding: 10px;
+  background-color: yellow;
 }
 
-.paginacion{
-    grid-area: paginacion;
-    padding: 10px;
-    background-color: red;
-    color: #ffff;
+footer {
+  grid-area: footer;
+  padding: 10px;
+  background-color: greenyellow;
+  color: #000;
 }
-
-footer{
-    grid-area: footer;
-    padding: 10px;
-    background-color: greenyellow;
-    color: #000;
-}
-
-
-
-
 
 /* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {  }
+@media (min-width: 576px) {
+  body {
+    display: grid;
+    grid-template-rows: 50px calc(100vh - 100px) 50px;
+    grid-template-areas:
+      "nav nav nav"
+      "buscar section section"
+      "footer footer footer";
+  }
+}
 
 /*Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { }
-
+@media (min-width: 992px) {
+    body {
+    display: grid;
+    grid-template-rows: 50px calc(100vh - 100px) 50px;
+    grid-template-areas:
+      "nav  buscar buscar"
+      "nav section section"
+      "footer section section";
+  }
+}
